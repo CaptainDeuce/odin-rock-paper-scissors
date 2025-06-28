@@ -59,7 +59,13 @@ function playGame() {
         playRound(humanSelection, computerSelection);
     }
 
-    (humanScore > computerScore) ? console.log(`You win! You won ${humanScore} rounds`) : console.log(`You lose! The computer won ${computerScore} rounds`);
+    if (humanScore === computerScore) {
+        console.log("You tied.");
+    } else if (humanScore > computerScore) {
+        console.log(`You win! You won ${humanScore} rounds`);
+    } else {
+        console.log(`You lose! The computer won ${computerScore} rounds`);
+    }
 }
 
 playGame();
