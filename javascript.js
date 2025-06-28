@@ -61,3 +61,5 @@ function playGame() {
 
     (humanScore > computerScore) ? console.log(`You win! You won ${humanScore} rounds`) : console.log(`You lose! The computer won ${computerScore} rounds`);
 }
+
+playGame();
