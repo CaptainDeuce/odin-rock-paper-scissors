@@ -55,21 +55,21 @@ function playGame() {
     rockBtn.addEventListener("click", () => {
         let humanSelection = "rock";
         let computerSelection = getComputerChoice();
-        playRound();
+        playRound(humanSelection, computerSelection);
     });
 
     const paperBtn = document.querySelector(".paper");
     rockBtn.addEventListener("click", () => {
         let humanSelection = "paper";
         let computerSelection = getComputerChoice();
-        playRound();
+        playRound(humanSelection, computerSelection);
     });
 
     const scissorsBtn = document.querySelector(".scissors");
     rockBtn.addEventListener("click", () => {
         let humanSelection = "scissors";
         let computerSelection = getComputerChoice();
-        playRound();
+        playRound(humanSelection, computerSelection);
     });
 
     if (humanScore === computerScore) {
