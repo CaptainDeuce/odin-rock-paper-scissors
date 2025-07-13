@@ -14,6 +14,7 @@ function playGame() {
     let computerScore = 0;
 
     function playRound(humanChoice, computerChoice) {
+        const body = document.querySelector("body");
         let roundDiv = document.createElement("div");
         body.appendChild(roundDiv);
         if (humanChoice === "rock") {
