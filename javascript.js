@@ -68,7 +68,7 @@ function playGame() {
         playRound(humanSelection, computerSelection);
     });
 
-    let displayResult = document.querySelector("div");
+    let displayResult = document.querySelector(".display-results");
     if (humanScore === computerScore) {
         displayResult.textContent = "You tied.";
     } else if (humanScore > computerScore) {
