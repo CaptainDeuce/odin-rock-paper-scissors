@@ -13,7 +13,7 @@ function playGame() {
     let humanScore = 0;
     let computerScore = 0;
 
-    let displayResult = document.querySelector(".display-results");
+    let displayResult = document.querySelector(".displayResults");
 
     function playRound(humanChoice, computerChoice) {
         const body = document.querySelector("body");
