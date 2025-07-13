@@ -15,6 +15,14 @@ function playGame() {
 
     let displayResult = document.querySelector(".displayResults");
 
+    function checkFinalScore(humanScore, computerScore) {
+        if (humanScore === 5) {
+            displayResult.textContent = `You win!`;
+        } else if (computerScore === 5) {
+            displayResult.textContent = `You lose!`;
+        }
+    }
+
     function playRound(humanChoice, computerChoice) {
         const body = document.querySelector("body");
         let roundDiv = document.createElement("div");
@@ -72,12 +80,6 @@ function playGame() {
         let computerSelection = getComputerChoice();
         playRound(humanSelection, computerSelection);
     });
-
-    if (humanScore === 5) {
-        displayResult.textContent = `You win!`;
-    } else if (computerScore === 5) {
-        displayResult.textContent = `You lose!`;
-    }
 }
 
 playGame();
