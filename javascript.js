@@ -73,7 +73,7 @@ function playGame() {
     let displayResult = document.querySelector(".display-results");
     if (humanScore === 5) {
         displayResult.textContent = `You win!`;
-    } else {
+    } else if (computerScore === 5) {
         displayResult.textContent = `You lose!`;
     }
 }
