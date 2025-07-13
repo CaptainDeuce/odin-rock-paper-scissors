@@ -17,9 +17,9 @@ function playGame() {
 
     function checkFinalScore(humanScore, computerScore) {
         if (humanScore === 5) {
-            displayResult.textContent = `\nYou win!`;
+            displayResult.textContent = `You win!`;
         } else if (computerScore === 5) {
-            displayResult.textContent = `\nYou lose!`;
+            displayResult.textContent = `You lose!`;
         }
     }
 
