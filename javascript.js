@@ -58,14 +58,14 @@ function playGame() {
     });
 
     const paperBtn = document.querySelector(".paper");
-    rockBtn.addEventListener("click", () => {
+    paperBtn.addEventListener("click", () => {
         let humanSelection = "paper";
         let computerSelection = getComputerChoice();
         playRound(humanSelection, computerSelection);
     });
 
     const scissorsBtn = document.querySelector(".scissors");
-    rockBtn.addEventListener("click", () => {
+    scissorsBtn.addEventListener("click", () => {
         let humanSelection = "scissors";
         let computerSelection = getComputerChoice();
         playRound(humanSelection, computerSelection);
