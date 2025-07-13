@@ -33,27 +33,33 @@ function playGame() {
             } else if (computerChoice === "paper") {
                 roundDiv.textContent = "You lose! Paper beats rock";
                 computerScore++;
+                checkFinalScore(humanScore, computerScore);
             } else {
                 roundDiv.textContent = "You win! Rock beats scissors";
                 humanScore++;
+                checkFinalScore(humanScore, computerScore);
             }
         } else if (humanChoice === "paper") {
             if (computerChoice === "rock") {
                 roundDiv.textContent = "You win! Paper beats rock";
                 humanScore++;
+                checkFinalScore(humanScore, computerScore);
             } else if (computerChoice === "paper") {
                 roundDiv.textContent = "It's a tie.";
             } else {
                 roundDiv.textContent = "You lose! Scissors beat paper";
                 computerScore++;
+                checkFinalScore(humanScore, computerScore);
             }
         } else {
             if (computerChoice === "rock") {
                 roundDiv.textContent = "You lose! Rock beats scissors";
                 computerScore++;
+                checkFinalScore(humanScore, computerScore);
             } else if (computerChoice === "paper") {
                 roundDiv.textContent = "You win! Scissors beats paper";
                 humanScore++;
+                checkFinalScore(humanScore, computerScore);
             } else {
                 roundDiv.textContent = "It's a tie.";
             }
