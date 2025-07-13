@@ -14,35 +14,37 @@ function playGame() {
     let computerScore = 0;
 
     function playRound(humanChoice, computerChoice) {
+        let roundDiv = document.createElement("div");
+        body.appendChild(roundDiv);
         if (humanChoice === "rock") {
             if (computerChoice === "rock") {
-                console.log("It's a tie.");
+                roundDiv.textContent = "It's a tie.";
             } else if (computerChoice === "paper") {
-                console.log("You lose! Paper beats rock");
+                roundDiv.textContent = "You lose! Paper beats rock";
                 computerScore++;
             } else {
-                console.log("You win! Rock beats scissors");
+                roundDiv.textContent = "You win! Rock beats scissors";
                 humanScore++;
             }
         } else if (humanChoice === "paper") {
             if (computerChoice === "rock") {
-                console.log("You win! Paper beats rock");
+                roundDiv.textContent = "You win! Paper beats rock";
                 humanScore++;
             } else if (computerChoice === "paper") {
-                console.log("It's a tie.");
+                roundDiv.textContent = "It's a tie.";
             } else {
-                console.log("You lose! Scissors beat paper");
+                roundDiv.textContent = "You lose! Scissors beat paper";
                 computerScore++;
             }
         } else {
             if (computerChoice === "rock") {
-                console.log("You lose! Rock beats scissors");
+                roundDiv.textContent = "You lose! Rock beats scissors";
                 computerScore++;
             } else if (computerChoice === "paper") {
-                console.log("You win! Scissors beats paper");
+                roundDiv.textContent = "You win! Scissors beats paper";
                 humanScore++;
             } else {
-                console.log("It's a tie.");
+                roundDiv.textContent = "It's a tie.";
             }
         }
     }
