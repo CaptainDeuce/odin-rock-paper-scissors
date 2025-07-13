@@ -68,12 +68,13 @@ function playGame() {
         playRound(humanSelection, computerSelection);
     });
 
+    let displayResult = document.querySelector("div");
     if (humanScore === computerScore) {
-        console.log("You tied.");
+        displayResult.textContent = "You tied.";
     } else if (humanScore > computerScore) {
-        console.log(`You win! You won ${humanScore} rounds`);
+        displayResult.textContent = `You win! You won ${humanScore} rounds`;
     } else {
-        console.log(`You lose! The computer won ${computerScore} rounds`);
+        displayResult.textContent = `You lose! The computer won ${computerScore} rounds`;
     }
 }
 
