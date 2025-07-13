@@ -18,8 +18,7 @@ function playGame() {
     let computerScore = 0;
 
     function playRound(humanChoice, computerChoice) {
-        let generalHumanChoice = humanChoice.toLowerCase();
-        if (generalHumanChoice === "rock") {
+        if (humanChoice === "rock") {
             if (computerChoice === "rock") {
                 console.log("It's a tie.");
             } else if (computerChoice === "paper") {
@@ -29,7 +28,7 @@ function playGame() {
                 console.log("You win! Rock beats scissors");
                 humanScore++;
             }
-        } else if (generalHumanChoice === "paper") {
+        } else if (humanChoice === "paper") {
             if (computerChoice === "rock") {
                 console.log("You win! Paper beats rock");
                 humanScore++;
@@ -52,12 +51,26 @@ function playGame() {
         }
     }
 
-    for (let i = 0; i < 5; i++) {
-        let humanSelection = getHumanChoice();
+    const rockBtn = document.querySelector(".rock");
+    rockBtn.addEventListener("click", () => {
+        let humanSelection = "rock";
         let computerSelection = getComputerChoice();
+        playRound();
+    });
 
-        playRound(humanSelection, computerSelection);
-    }
+    const paperBtn = document.querySelector(".paper");
+    rockBtn.addEventListener("click", () => {
+        let humanSelection = "paper";
+        let computerSelection = getComputerChoice();
+        playRound();
+    });
+
+    const scissorsBtn = document.querySelector(".scissors");
+    rockBtn.addEventListener("click", () => {
+        let humanSelection = "scissors";
+        let computerSelection = getComputerChoice();
+        playRound();
+    });
 
     if (humanScore === computerScore) {
         console.log("You tied.");
