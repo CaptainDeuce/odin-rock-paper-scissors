@@ -69,12 +69,10 @@ function playGame() {
     });
 
     let displayResult = document.querySelector(".display-results");
-    if (humanScore === computerScore) {
-        displayResult.textContent = "You tied.";
-    } else if (humanScore > computerScore) {
-        displayResult.textContent = `You win! You won ${humanScore} rounds`;
+    if (humanScore === 5) {
+        displayResult.textContent = `You win!`;
     } else {
-        displayResult.textContent = `You lose! The computer won ${computerScore} rounds`;
+        displayResult.textContent = `You lose!`;
     }
 }
 
