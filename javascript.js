@@ -13,10 +13,12 @@ function playGame() {
     let humanScore = 0;
     let computerScore = 0;
 
+    let displayResult = document.querySelector(".display-results");
+
     function playRound(humanChoice, computerChoice) {
         const body = document.querySelector("body");
         let roundDiv = document.createElement("div");
-        body.appendChild(roundDiv);
+        body.insertBefore(roundDiv, displayResult);
         if (humanChoice === "rock") {
             if (computerChoice === "rock") {
                 roundDiv.textContent = "It's a tie.";
@@ -71,7 +73,6 @@ function playGame() {
         playRound(humanSelection, computerSelection);
     });
 
-    let displayResult = document.querySelector(".display-results");
     if (humanScore === 5) {
         displayResult.textContent = `You win!`;
     } else if (computerScore === 5) {
